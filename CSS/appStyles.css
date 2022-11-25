@@ -1,0 +1,542 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+html body {
+  font-size: 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+html * {
+  margin: 0;
+  padding: 0;
+}
+html h1 {
+  font-size: 3.8rem;
+}
+html h2 {
+  font-size: 3.4rem;
+}
+html h3 {
+  font-size: 3rem;
+}
+html h4 {
+  font-size: 2.4rem;
+  font-weight: 300;
+}
+html .contenedor {
+  width: 120rem;
+  margin: 0 auto;
+}
+html .section {
+  margin: 4rem auto;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.siteHeader {
+  height: 100vh;
+  background-position: center center;
+  background-size: cover;
+  animation: slideBanner 6s infinite;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@keyframes slideBanner {
+  0% {
+    background-image: url(../IMG/inversion1.webp);
+  }
+  33% {
+    background-image: url(../IMG/inversion1.webp);
+  }
+  34% {
+    background-image: url(../IMG/inversion2.webp);
+  }
+  66% {
+    background-image: url(../IMG/inversion2.webp);
+  }
+  67% {
+    background-image: url(../IMG/slide3.webp);
+  }
+  100% {
+    background-image: url(../IMG/slide3.webp);
+  }
+}
+.siteHeader .barra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+}
+.siteHeader .barra .barraLogo {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.siteHeader .barra .barraLogo .barraLogo__txt {
+  color: #fff;
+}
+.siteHeader .barra .barraLogo .barraLogo__txt h1 {
+  font-weight: 300;
+}
+.siteHeader .barra .barraNav {
+  z-index: 1;
+}
+.siteHeader .barra .barraNav .barraNav__ul {
+  display: flex;
+  gap: 4rem;
+}
+.siteHeader .barra .barraNav .barraNav__ul .barraNav__ulItem {
+  list-style: none;
+}
+.siteHeader .barra .barraNav .barraNav__ul .barraNav__ulItem a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 2.2rem;
+}
+.siteHeader .barra .barraNav .barraNav__ul .barraNav__ulItem a:hover {
+  color: #fab131;
+}
+.siteHeader .contenidoSiteHeader {
+  padding-bottom: 18rem;
+  color: #fff;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+}
+.siteHeader .contenidoSiteHeader h2 {
+  text-transform: uppercase;
+}
+.siteHeader .contenidoSiteHeader p {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+
+.siteHeader::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+}
+
+.navScroll .barra {
+  background-color: #f5f5f5;
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  justify-content: center;
+  gap: 30rem;
+  padding: 1rem;
+  transition: background-color 1.2s;
+  border-bottom: 0.1rem solid #000;
+}
+.navScroll .barra .barraLogo .barraLogo__txt {
+  color: #000000;
+}
+.navScroll .barra .barraLogo .barraLogo__txt h1 {
+  font-size: 3rem;
+  color: #424e7e;
+  font-weight: 400;
+  transition: all 600ms;
+}
+.navScroll .barra .barraNav .barraNav__ul .barraNav__ulItem > a {
+  color: #000000;
+  font-size: 1.8rem;
+  display: block;
+  transition: all 500ms;
+}
+.navScroll .barra .barraNav .barraNav__ul .barraNav__ulItem > a:hover {
+  transform: scale(1.5);
+}
+
+/**empieza a invertir**/
+.empiezaInvertir .empiezaInvertir__txt {
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.empiezaInvertir .empiezaInvertir__txt h2 {
+  font-weight: 300;
+  color: #031e41;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.empiezaInvertir .empiezaInvertir__txt p {
+  margin: 1rem 0;
+}
+.empiezaInvertir .cards {
+  display: flex;
+  gap: 3rem;
+  height: 100%;
+  cursor: pointer;
+}
+.empiezaInvertir .cards .flipContainer {
+  background-color: transparent;
+  width: 100%;
+  perspective: 1000px;
+}
+.empiezaInvertir .cards .flipContainer:hover .card {
+  transform: rotateY(180deg);
+}
+.empiezaInvertir .cards .flipContainer .card {
+  width: 100%;
+  transform-style: preserve-3d;
+  position: relative;
+  height: 25rem;
+  transition: transform 1s;
+  border-radius: 0.5rem;
+}
+.empiezaInvertir .cards .flipContainer .card .front {
+  background-color: #f5f5f5;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 1rem 1rem 1rem #ccc;
+}
+.empiezaInvertir .cards .flipContainer .card .front h4 {
+  margin: 2rem 0;
+  font-weight: 600;
+}
+.empiezaInvertir .cards .flipContainer .card .front p {
+  line-height: 2;
+  text-align: justify;
+}
+.empiezaInvertir .cards .flipContainer .card .back {
+  background-color: #ccc9c9;
+  padding: 3rem;
+  border-radius: 0.5rem;
+  transform: rotateY(180deg);
+}
+.empiezaInvertir .cards .flipContainer .card .back ul > li {
+  text-align: justify;
+  margin-bottom: 1.5rem;
+}
+.empiezaInvertir .cards .flipContainer .card .front, .empiezaInvertir .cards .flipContainer .card .back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+/*Banner*/
+.banner {
+  background-image: url(../IMG/fondo-section-1-home.webp);
+  height: 26rem;
+  background-repeat: no-repeat;
+  margin-top: 10rem;
+}
+.banner .contenidoBanner {
+  color: #fff;
+  padding-top: 8rem;
+}
+.banner .contenidoBanner p {
+  width: 55rem;
+  margin-top: 2rem;
+}
+
+/*Calculadora de interes*/
+label {
+  display: block;
+  margin: 1rem 0;
+}
+
+input, select {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+}
+
+select, option {
+  cursor: pointer;
+}
+
+th {
+  padding: 1rem;
+  background-color: #b5b5b5;
+  border-radius: 0.5rem;
+}
+
+td {
+  text-align: center;
+  background-color: #dfd9d9;
+  padding: 0.8rem;
+}
+
+caption {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.calculadoraInteres .calculadoraInteres__texto {
+  text-align: center;
+}
+.calculadoraInteres .calculadoraInteres__texto h2 {
+  color: #031e41;
+  font-weight: 300;
+}
+.calculadoraInteres .calculadoraInteres__texto p {
+  margin-top: 1rem;
+}
+.calculadoraInteres .calculadora_Tabla {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  margin-top: 4rem;
+}
+.calculadoraInteres .calculadora_Tabla .calculadora {
+  border: 0.1rem solid #ccc;
+  background-color: #f5f5f5;
+  margin: 2rem 0;
+  padding: 3rem;
+  border-radius: 1rem;
+  width: 100%;
+  flex-basis: 40%;
+}
+.calculadoraInteres .calculadora_Tabla .calculadora .calculadoraItem .inputCapital {
+  display: flex;
+  gap: 1rem;
+}
+.calculadoraInteres .calculadora_Tabla .calculadora .btn {
+  text-decoration: none;
+  font-size: 2rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  background-color: #031e41;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  width: 100%;
+  transition: 0.3s ease all;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 1rem 2rem;
+}
+.calculadoraInteres .calculadora_Tabla .calculadora .btn:hover::after {
+  left: 0;
+}
+.calculadoraInteres .calculadora_Tabla .calculadora .btn > span {
+  position: relative;
+  z-index: 2;
+  transition: 0.3s ease all;
+}
+.calculadoraInteres .calculadora_Tabla .calculadora .btn::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #2178f1;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: -100%;
+  transition: 0.3s ease-in-out all;
+}
+.calculadoraInteres .calculadora_Tabla .tablaInteres {
+  flex-basis: 60%;
+  display: none;
+  border: 0.1rem solid #ccc;
+  padding: 2rem;
+  border-radius: 1rem;
+  height: 100%;
+  background-color: #f5f5f5;
+}
+.calculadoraInteres .calculadora_Tabla .tablaInteres h2 {
+  text-align: center;
+  margin: 1.5rem auto;
+}
+.calculadoraInteres .calculadoraTabla_Styles .tablaInteres_stylesJS {
+  display: block;
+}
+
+.chartRendimientos {
+  display: none;
+}
+
+.estilosChart {
+  display: block;
+}
+.estilosChart h2 {
+  text-align: center;
+  font-weight: 300;
+  margin: 2rem auto;
+}
+
+.precio_Acciones {
+  overflow: hidden;
+}
+.precio_Acciones h2 {
+  color: #031e41;
+  text-align: center;
+  font-weight: 300;
+}
+.precio_Acciones .slider {
+  display: flex;
+  gap: 2rem;
+}
+.precio_Acciones .slider .sliderItem {
+  background-color: #f5f5f5;
+  padding: 2rem;
+  width: 100%;
+  border: 0.1rem solid #333;
+  border-radius: 0.5rem;
+  height: 100%;
+}
+.precio_Acciones .slider .sliderItem .precioAccion {
+  display: flex;
+  align-items: center;
+}
+.precio_Acciones .slider .sliderItem .precioAccion .precioAccion__img {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-right: 0.1rem solid #000;
+}
+.precio_Acciones .slider .sliderItem .precioAccion .precioAccion__img h4 {
+  margin-right: 1rem;
+}
+.precio_Acciones .slider .sliderItem .precioAccion p {
+  margin-left: 1rem;
+  color: red;
+}
+.precio_Acciones .slider .sliderItem .variacionPrecio {
+  display: flex;
+  align-items: center;
+}
+.precio_Acciones .slider .sliderItem .variacionPrecio p {
+  color: green;
+}
+
+.slider {
+  animation: sliderPrecios 10s infinite linear;
+}
+@keyframes sliderPrecios {
+  0% {
+    transform: translateX(-110%);
+  }
+  100% {
+    transform: translateX(1%);
+  }
+}
+
+.tiposDeCambio {
+  display: flex;
+}
+
+.bgDivisas {
+  background-color: #b0cbdb;
+  padding: 2rem;
+  flex-basis: 40%;
+}
+.bgDivisas .divisas {
+  background-color: #031e41;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+.bgDivisas .divisas .divisasTbody th {
+  border-radius: 0;
+  background: none;
+  color: #fff;
+}
+.bgDivisas .divisas .divisasTbody td {
+  background: none;
+  color: #fff;
+  font-weight: 300;
+  border-bottom: 0.1rem solid #808ea2;
+}
+
+.bgAlzasPrecios {
+  background-color: #031e41;
+  padding: 2rem;
+  flex-basis: 60%;
+  display: flex;
+  gap: 2rem;
+}
+.bgAlzasPrecios .mayoresAlzas {
+  width: 100%;
+}
+.bgAlzasPrecios .mayoresAlzas td.tdColor {
+  color: green;
+}
+.bgAlzasPrecios .mayoresAlzas td {
+  color: #031e41;
+}
+.bgAlzasPrecios .menoresAlzas {
+  width: 100%;
+}
+.bgAlzasPrecios .menoresAlzas td.tdColor {
+  color: red;
+}
+.bgAlzasPrecios .menoresAlzas td {
+  color: #031e41;
+  text-transform: uppercase;
+}
+.bgAlzasPrecios .mayoresAlzas, .bgAlzasPrecios .menoresAlzas {
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+.bgAlzasPrecios .mayoresAlzas caption, .bgAlzasPrecios .menoresAlzas caption {
+  color: #fff;
+}
+.bgAlzasPrecios .mayoresAlzas td, .bgAlzasPrecios .menoresAlzas td {
+  background: none;
+}
+
+.infoTipoCambio p {
+  color: #808ea2;
+}
+.infoTipoCambio a {
+  text-decoration: none;
+  color: #1887ff;
+}
+
+.bgFooter {
+  background-color: #031e41;
+  padding: 4rem;
+}
+.bgFooter .footerItem {
+  display: flex;
+  gap: 2rem;
+  border-bottom: 0.1rem solid #fff;
+}
+.bgFooter .footerItem .footerItemContenido {
+  padding: 1rem;
+  flex-basis: 25%;
+}
+.bgFooter .footerItem .footerItemContenido p {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.bgFooter .footerItem .footerItemContenido:nth-child(4) {
+  display: flex;
+  justify-content: space-between;
+}
+.bgFooter .footerItem .non-display {
+  flex-direction: column;
+}
+.bgFooter .itemFooter {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.tldr {
+  background-color: #b3a369;
+}
+.tldr h4 {
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+
+/*# sourceMappingURL=appStyles.css.map */

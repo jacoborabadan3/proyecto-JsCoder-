@@ -1,0 +1,70 @@
+.tiposDeCambio {
+    display: flex;
+}
+.bgDivisas {
+    background-color: #b0cbdb;
+    padding: 2rem;
+    flex-basis: calc(40%);
+    .divisas {
+        background-color: #031e41;
+        padding: 1rem;
+        border-radius: .5rem;
+        width: 100%;
+        .divisasTbody {
+            th {
+                border-radius: 0;
+                background: none;
+                color: #fff;
+            }
+            td {
+                background: none;
+                color: #fff;
+                font-weight: 300;
+                border-bottom: .1rem solid #808ea2;
+            }
+        }
+    }
+}
+
+
+.bgAlzasPrecios {
+    background-color: #031e41;
+    padding: 2rem;
+    flex-basis: calc(60%);
+    display: flex;
+    gap: 2rem;
+    //mayores alzas
+    .mayoresAlzas {
+        width: 100%;
+        td.tdColor {
+            color: green;
+        }
+        td {
+            color: #031e41;
+        }
+
+    }
+    .menoresAlzas {
+        width: 100%;
+        td.tdColor {
+            color: red;
+        }
+        td {
+            color: #031e41;
+            text-transform: uppercase;
+        }
+    }
+    .mayoresAlzas, .menoresAlzas {
+        caption {color: #fff;}
+        background-color: #fff;
+        border-radius: .5rem;
+        td {
+            background: none;
+        }
+    }
+}
+
+.infoTipoCambio {
+    p {color: #808ea2;}
+    a {text-decoration: none; color: #1887ff;}
+}

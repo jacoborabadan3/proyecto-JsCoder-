@@ -1,0 +1,62 @@
+[
+   {
+      "nombreEmpresa":"Facebook",
+      "variacionPrecio":10.2345,
+      "valorAccion":2640,
+      "imagen": "facebook.svg"
+   },
+   {
+      "nombreEmpresa":"Google",
+      "variacionPrecio":2.8943,
+      "valorAccion":3490.89,
+      "imagen": "google.svg"
+   },
+   {
+      "nombreEmpresa":"TikTok",
+      "variacionPrecio":24.8943,
+      "valorAccion":4500.45,
+      "imagen": "tiktok.svg"
+   },
+   {
+      "nombreEmpresa":"Apple",
+      "variacionPrecio":24.3489,
+      "valorAccion":2879.23,
+      "imagen": "apple.svg"
+   },
+   {
+      "nombreEmpresa":"Microsoft",
+      "variacionPrecio":34.5693,
+      "valorAccion":4761.28,
+      "imagen": "microsoft.svg"
+   },
+   {
+      "nombreEmpresa":"Spotify",
+      "variacionPrecio":94.3802,
+      "valorAccion":1752.25,
+      "imagen": "spotify.svg"
+   },
+   {
+      "nombreEmpresa":"Yahoo",
+      "variacionPrecio":98.4320,
+      "valorAccion":54300.18,
+      "imagen": "yahoo.svg"
+   },
+   {
+      "nombreEmpresa":"Uber",
+      "variacionPrecio":49.8340,
+      "valorAccion":559,
+      "imagen": "uber.svg"
+   },
+   {
+      "nombreEmpresa":"Amazon",
+      "variacionPrecio":4.38970,
+      "valorAccion":2308.82,
+      "imagen": "aws.svg"
+   },
+   {
+      "nombreEmpresa":"Airbnb",
+      "variacionPrecio":3.749,
+      "valorAccion":2350,
+      "imagen": "airbnb.svg"
+   }
+]

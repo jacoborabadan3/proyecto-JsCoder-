@@ -1,0 +1,18 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    body {
+        font-size: 1.6rem;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    * {margin: 0;padding: 0;}
+    //Estilos Globales
+    h1 {font-size: 3.8rem;}
+    h2 {font-size: 3.4rem;}
+    h3 {font-size: 3rem;}
+    h4 {font-size: 2.4rem; font-weight: 300;}
+    //Utilidades
+    .contenedor{width: 120rem; margin: 0 auto;}
+    .section {margin: 4rem auto;}
+}
+*, *:before, *:after {box-sizing: inherit;}

@@ -1,0 +1,13 @@
+/*Banner*/
+.banner {
+    background-image: url(../IMG/fondo-section-1-home.webp);
+    height: 26rem;
+    background-repeat: no-repeat;
+    margin-top: 10rem;
+    //contenidoBanner
+    .contenidoBanner {
+        color: #fff;
+        padding-top: 8rem;
+        p {width: 55rem; margin-top: 2rem;}
+    }
+}

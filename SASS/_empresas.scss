@@ -1,0 +1,46 @@
+.precio_Acciones {
+    overflow: hidden;
+    h2 {color: #031e41;  text-align: center; font-weight: 300;}
+    .slider {
+        display: flex;
+        gap: 2rem;
+        .sliderItem {
+            background-color: #f5f5f5;
+            padding: 2rem;
+            width: 100%;
+            border: .1rem solid #333;
+            border-radius: .5rem;
+            height: 100%;
+            //logo y nombre
+            .precioAccion {
+                display: flex;
+                align-items: center;
+                .precioAccion__img {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    border-right: .1rem solid #000;
+                    h4 {margin-right: 1rem;}
+                }
+                p {
+                    margin-left: 1rem;
+                    color: red;
+                }
+            }
+            // variacion precio
+            .variacionPrecio {
+                display: flex;
+                align-items: center;
+                p {color: green;}
+            }
+        }
+    }
+}
+
+.slider {
+    animation: sliderPrecios 10s infinite linear;
+    @keyframes sliderPrecios {
+        0% {transform: translateX(-110%);}
+        100% {transform: translateX(1%);}
+    }
+}
